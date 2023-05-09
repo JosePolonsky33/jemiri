@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 02/2 - Tablas en HTML</title>
+    </head>
+    <body>
+        <h3>Mis Libros Favoritos</h3>
+        <table>
+            <tr>
+                <th>Titulo</th>
+                <th>Autor</th>
+                <th>Añor de publicación</th>
+                <th>Enlace a Amazon</th>
+            </tr>
+            <tr>
+                <td>El conde de Montecristo</td>
+                <td>Alexandre Dumas</td>
+                <td>1 Octubre 2008</td>
+                <td>https://www.amazon.com/-/es/Alexandre-Dumas/dp/9500306441</td>
+            </tr>
+            <tr>
+                <td>La legión de los condenados</td>
+                <td>Sven Hassel</td>
+                <td>1 Enero 2013</td>
+                <td>https://www.amazon.com/-/es/Sven-Hassel/dp/8415372515</td>
+            </tr>
+            <tr>
+                <td>Alas rotas</td>
+                <td>Gibran Khalil Gibran</td>
+                <td>Agosto 2017</td>
+                <td>https://www.amazon.com/-/es/Gibran-Khalil/dp/1975670930</td>
+            </tr>
+        </table>
 
+    </body>
+    
+    
+    </html>
