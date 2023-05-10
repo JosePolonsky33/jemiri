@@ -1,1 +1,26 @@
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 1 Multimedia</title>
+    </head>
+    <body>
+        <section>
+            <h1>Aprendiendo a utilizar imágenes</h1>
+            <h2>DX ball</h2>
+            <img src="https://i.ytimg.com/vi/4qnLcdjvZro/hqdefault.jpg" width="300px" height="300px" alt="Imágen del juego DX ball">
+         </section>
+         <section>
+            <h1>Aprendiendo a utilizar los videos</h1>
+            <h2>Abba - The Winner Takes It All</h2>
+            <video width="300px" height="300px" controls muted waiting="5000" autoplay loop>
+                <source src="ABBA  The Winner Takes It All.mp4" type="video/mp4">
+                <p>Tu navegador no soporta la reproducción de vídeos mp4.</p>
+            </video>            
+        </section>
+        <section>
+            <h1>Fair Warning - Aprendiendo a utilizar los audios</h1>
+            <h2>Long gone</h2>
+            <audio src="08 - Long gone.mp3" type="audio/mp3" controls autoplay loop></audio>
+        </section>        
+    </body>
+</html>
