@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Eventos</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    
+    <div class="divtitulo">
+        <h1>Registro de Eventos</h1>
+        <h2 class="nomEmpresa">Diamanteventos, S.A.</h2>
+        <img class="diamente" src="Diamente.png" alt="Logo de la empresa Diamante, S.A.">
+    </div>
+
+    <div>
+        <h2 class="eventodata">Registro de nuevo evento</h2>
+
+        <form action = "enviado.html" id = "nuevoEventoForm" method = "get" onsubmit = "return validar ()">
+
+            <div>
+                
+                <label for="codigoEventoEtiqueta" id="codigoEventoEtiqueta"><b>Código del evento</b></label>
+                <input type="number" name="codigoEvento" id="codigoEvento">
+
+                    <script>
+
+                        function incrementarCod () {
+                            let crearCodigoEvento = document.getElementById ("codigoEvento");
+                            let valorActualCod = parseInt (crearCodigoEvento.value);
+                            crearCodigoEvento.value = valorActualCod + 1;
+                            }
+
+                        window.onload = function () {
+                            incrementarCod ();
+                        }
+
+                    </script>
+
+            </div>
+
+            <div>
+                
+                <label for="nombreResponsable">Nombre del responsable</label>
+                <input type="text" name="nombreResponsable" id="nombreResponsable">
+
+                <label for="nombreEvento">Nombre del evento</label>
+                <input type="text" name="nombreEvento" id="nombreEvento">
+
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password">
+
+                <label for="fechaEvento">Fecha del evento</label>
+                <input type="date" name="fechaEvento" id="fechaEvento">
+
+                <label for="correoElectronico">Correo Electrónico</label>
+                <input type="email" name="correoElectronico" id="correoElectronico">
+
+                <label for="numInvitados">Cantidad de invitados</label>
+                <input type="number" name="numInvitados" id="numInvitados">
+                
+            </div>
+
+            <div>
+                
+                <input id="guardar" onclick="guardarEvento ()" type="submit" value="Guardar evento">
+
+            </div>
+
+            <div>
+                <input id="modificar" onclick="modificarEvento ()" type="submit" value="Modificar evento">
+            </div>
+                
+        </form>
+
+    <div>
+
+        <button onclick="window.close(); window.open ('Inicio.html');" type="menu">Regresar a Inicio</button>
+
+    </div>
+
+    <p class="advertencia" id="validacion">
+
+    </p>
+    
+</body>
+
+<script>
+
+    function validar () {
+        
+        let nombreResponsable = document.getElementById ('nombreResponsable');
+        let nombreEvento = document.getElementById ('nombreEvento');
+        let password = document.getElementById ('password');
+        let date = document.getElementById ('fechaEvento');
+        let correoElectronico = document.getElementById ('correoElectronico');
+        let numInvitados = document.getElementById ('numInvitados');
+        let esCorrecto = true;
+        let p = document.getElementById ('validacion');
+
+        if (nombreResponsable.value == "" || nombreEvento.value == "" || password.value == "" || date.value == "" || correoElectronico.value == "" || numInvitados.value == "") {
+
+            p.innerHTML = "<h2>Es necesario que llene todos los campos, porfavor</h2>";
+            esCorrecto = false;
+        }
+
+        console.log(esCorrecto);
+        return esCorrecto;
+    }
+
+        function guardarEvento () {
+            // revisar si el codigo ya existe
+            let codigoActualEvento = localStorage.getItem(document.getElementById("codigoEvento").value);
+            if (codigoActualEvento == "" || codigoActualEvento == null){
+                localStorage.setItem(document.getElementById("codigoEvento").value,
+                                    document.getElementById("nombreEvento").value,
+                                    document.getElementById("password").value,
+                                    document.getElementById("fechaEvento").value,
+                                    document.getElementById("correoElectronico").value,
+                                    document.getElementById("numInvitados").value);
+            }else{
+                document.write("<h2>El evento ya existe, su código es " + codigoActualEvento + ", correspondiente al Evento " + getElementById ("nombreEvento") + ", y responsable " + getElementById ("nombreResponsable")) + "</h2>";
+            }
+        }
+
+</script>
+
+</html>

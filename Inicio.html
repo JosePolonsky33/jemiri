@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Programación Básica</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="divtitulo">
+        <h1>Inicio de Administración de Eventos</h1>
+        <h2 class="nomEmpresa">Diamanteventos, S.A.</h2>
+        <img class="diamente" src="Diamente.png" alt="Logo de la empresa Diamanteventos, S.A.">
+    </div>
+
+    <div class="divnuevo">
+        <h2 class="regnuevo">Registrar un nuevo evento</h2>
+        <button class="nuevoev" onclick="window.close(); window.open ('Registro_Eventos.html');"type="menu">Nuevo evento</button>
+    </div>
+
+    <div class="bloqueAdmon">
+        <h2>Ingresar a evento ya registrado</h2> 
+
+            <form action="" class="yaregform" method="GET">
+
+                <div class="formevento">
+                    <label for="nombreEvento">Ingresar el nombre del evento</label>
+                    <input type="text" name="nombreEvento" id="nombreEvento" required>
+                </div>
+
+                <div class="formmail">
+                    <label for="email">Ingresar correo electrónico</label>
+                    <input type="text" name="email" id="email" required>
+                </div>
+
+                <div class="formpass">
+                    <label for="contraseña">Ingresar contraseña</label>
+                    <input type="password" name="contraseña" id="contraseña" required>
+                </div>
+
+                <button onclick="window.close(); window.open ('Registro_invitados.html'); "type="submit">Entrar</button>
+
+            </form>
+    </div>
+
+    <div class="bloqueAdmon">
+        <h2>Eliminar evento</h2> 
+
+            <form action="" class="eliminareveto" method="GET">
+
+                <div class="formevento">
+                    <label for="nombreEvento">Ingresar el nombre del evento a eliminar</label>
+                    <input type="search" name="nombreEvento" id="nombreEventoEliminar" required>
+                    <button>Buscar</button>
+                </div>
+
+                <div class="formmail">
+                    <label for="email">Ingresar correo electrónico</label>
+                    <input type="text" name="email" id="emailEventoEliminar" required>
+                </div>
+
+                <div class="formpass">
+                    <label for="contraseña">Ingresar contraseña</label>
+                    <input type="password" name="contraseña" id="contraseñaEliminar" required>
+                </div>
+
+                <button onclick="borrarEvento ()" type="submit">Eliminar evento</button>
+
+            </form>
+    </div>
+
+
+    <div class="btnSalir">
+                
+        <button onclick = "window.close ()">Salir</button>
+
+    </div>
+    
+</body>
+
+<script>
+
+function borrarEvento () {
+            let codigoEvento = document.getElementById("codigoEvento").value;
+            let evento = JSON.parse(localStorage.getItem(codigoEvento)); //array
+            document.write("<h3>Informacion del evento " + codigoEvento + " " + getElementById ("nombreEvento") + " será eliminada</h3>");
+            document.write(evento);
+            localStorage.removeItem(codigoEvento);
+        }
+
+</script>
+
+</html>

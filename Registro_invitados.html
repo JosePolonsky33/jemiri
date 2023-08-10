@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de invitados</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="divtitulo">
+        <h1>Registro de Invitados</h1>
+        <h2 class="nomEmpresa">Diamanteventos, S.A.</h2>
+        <img class="diamente" src="Diamente.png" alt="Logo de la empresa Diamante, S.A.">
+    </div>
+
+    <h2>Evento: </h2>
+
+    <div>
+        <table>
+
+        <tr>
+            <td>
+                <label for="nombreResponsable">Nombre del responsable o familia</label>
+                <br>
+                <input type="text" name="nombreResponsable" id="nombreResponsable" required>
+            </td>
+            <td>
+                <label for="numInvitados">Cantidad de invitados</label>
+                <br>
+                <input type="number" name="numInvitados" id="numInvitados" required>
+            </td>
+        </tr>
+
+    </table>
+    </div>
+    
+    <div>
+        <label for="">Observaciones</label>
+        <br>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+
+    <div>
+        <button>Agregar</button>
+    </div>
+
+    <div>
+        <table>
+            <tr>
+                <th>Nombre del Evento</th>
+                <th>Cantidad de invitados</th>
+                <th>Acción</th>
+            </tr>
+
+            <tr>
+                <td>
+                    Raúl Maroto
+                </td>
+                <td>
+                    9
+                </td>
+                <td>
+                    <button>Confirmar</button> <button>Eliminar</button> <button>Editar</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Familia Nieves Segura
+                </td>
+                <td>
+                    39
+                </td>
+                <td>
+                    <button>Confirmar</button> <button>Eliminar</button> <button>Editar</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Iria Valera
+                </td>
+                <td>
+                    21
+                </td>
+                <td>
+                    <button>Confirmar</button> <button>Eliminar</button> <button>Editar</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <button onclick="window.close(); window.open ('Inicio.html');" type="menu">Regresar a Inicio</button>
+    </div>
+
+</body>
+</html>
